@@ -13,7 +13,7 @@ import { Fragment } from 'react'
 
 const useStyles = makeStyles((theme) => ({
 	container: {
-		backgroundColor: 'gray',
+		// backgroundColor: 'gray',
 	},
 	spacing: {
 		margin: '5px 0',
