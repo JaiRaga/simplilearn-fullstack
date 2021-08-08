@@ -24,7 +24,7 @@ export const getCourses = () => async (dispatch) => {
 		console.log(2)
 	} catch (err) {
 		console.log(err)
-		dispatch({ type: COURSE_ERROR })
+		// dispatch({ type: COURSE_ERROR })
 	}
 }
 

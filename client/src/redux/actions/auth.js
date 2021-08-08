@@ -65,7 +65,7 @@ export const login = (email, password) => async (dispatch) => {
 		const res = await axios.post('/api/login', body, config)
 
 		dispatch({ type: LOGIN_SUCCESS, payload: res.data })
-		// dispatch(loadUser())
+		dispatch(loadUser())
 	} catch (err) {
 		dispatch({ type: LOGIN_FAIL })
 	}

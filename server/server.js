@@ -16,10 +16,10 @@ app.use('/api', usersRouter)
 // Serve static assests in production
 if (process.env.NODE_ENV === 'production') {
 	// Serve static folder
-	app.use(express.static('client/build'))
+	app.use(express.static('../client/build'))
 
 	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+		res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
 	})
 }
 
