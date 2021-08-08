@@ -25,4 +25,25 @@ router.post('/login', async (req, res) => {
 	}
 })
 
+// Get my profile
+router.get('/user/me', auth, async (req, res) => {
+	res.send(req.user)
+})
+
+// Add Course
+router.post('/add-course', auth, async (req, res) => {
+	try {
+		console.log(1)
+		const id = req.body.id
+		console.log(2)
+		req.user.courses.push(id)
+		console.log(3)
+		await req.user.save()
+		console.log(4)
+		res.send(req.user.courses)
+	} catch (err) {
+		res.status(500).send('Internal server error')
+	}
+})
+
 module.exports = router

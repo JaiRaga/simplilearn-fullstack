@@ -30,6 +30,7 @@ const userSchema = new Schema(
 				}
 			},
 		},
+		courses: [String],
 		tokens: [
 			{
 				token: {
